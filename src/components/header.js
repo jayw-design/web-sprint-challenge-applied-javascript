@@ -14,15 +14,13 @@ const Header = (title, date, temp) => {
   dateSpan.classList.add('date');
   tempSpan.classList.add('temp');
 
-  dateSpan.textContent = title
-  titleHeader.textContent = date
-  tempSpan.textContent = temp
+  dateSpan.textContent = title;
+  titleHeader.textContent = date;
+  tempSpan.textContent = temp;
 
   // dateSpan.textContent = `${title}`;
   // titleHeader.textContent = `${date}`;
   // tempSpan.textContent = `${temp}`;
-
-
 
   return headerDiv;
 
@@ -43,8 +41,9 @@ const Header = (title, date, temp) => {
 
 
 const headerAppender = (selector) => {
+
   const result = document.querySelector(selector)
-  result.append(Header("San Francisco", "5.16.2021", "15F"))
+  result.append(Header("San Francisco", "5.16.2021", "15F"));
   
   // TASK 2
   // ---------------------
