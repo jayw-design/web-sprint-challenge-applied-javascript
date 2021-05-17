@@ -1,4 +1,31 @@
+
+
 const Header = (title, date, temp) => {
+  const headerDiv = document.createElement('div');
+  const dateSpan = document.createElement('span');
+  const titleHeader = document.createElement('h1');
+  const tempSpan = document.createElement('span');
+
+  headerDiv.append(dateSpan);
+  headerDiv.append(titleHeader);
+  headerDiv.append(tempSpan);
+
+  headerDiv.classList.add('header');
+  dateSpan.classList.add('date');
+  tempSpan.classList.add('temp');
+
+  dateSpan.textContent = title
+  titleHeader.textContent = date
+  tempSpan.textContent = temp
+
+  // dateSpan.textContent = `${title}`;
+  // titleHeader.textContent = `${date}`;
+  // tempSpan.textContent = `${temp}`;
+
+
+
+  return headerDiv;
+
   // TASK 1
   // ---------------------
   // Implement this function taking `title`, `date` and `temp` as its 3 args and returning the markup below.
@@ -11,9 +38,14 @@ const Header = (title, date, temp) => {
   //    <span class="temp">{ temp }</span>
   //  </div>
   //
-}
+};
+
+
 
 const headerAppender = (selector) => {
+  const result = document.querySelector(selector)
+  result.append(Header("San Francisco", "5.16.2021", "15F"))
+  
   // TASK 2
   // ---------------------
   // Implement this function taking a css selector as its only argument.
